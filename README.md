@@ -6,41 +6,37 @@
 
 ### Credit: Testeurs: emax31, arcade33, MilesTEG1, PhilouFr, emilio36, fredsame, aminov41, sevan, JMB. 
 
-### Packager chris1111
+### 封装: chris1111
 
-This a Mac OS X Package create with PackageMaker 
-
-VoodooHDA is an open source audio driver for devices compliant with the Intel High Definition Audio (HDA) specification.
-It is intended as an Intel-only replacement for AppleHDA on Mac OS X with support for a wide range of audio controllers and codecs.
+这是一个使用PackageMaker创建的Mac OS X包
+VoodooHDA是符合英特尔高保真音频（HDA）规范的设备的开源音频驱动程序。 它旨在作为Mac OS X上的AppleHDA的仅英特尔替代品，支持广泛的音频控制器和编解码器。
  
-Working for 10.12/10.11/10.10/10.9/10.8/10.7/10.6!  
+工作于 10.13/10.12/10.11/10.10/10.9/10.8/10.7/10.6
 
 
-## Instructions
+## 说明
 
-## Method-1 for Clover UEFI /ESP
+## 方法一:通过Clover UEFI/ESP驱动
+请点击下载:[VoodooHDA 2.9.0 Clover-V11.dmg](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/blob/master/VoodooHDA 2.9.0 Clover-V11.dmg)
+这个安装程序会自动安装到`/ESP/EFI/CLOVER/kexts/`以及下面的目录里10.13/10.12/10.11/10.10/10.9/10.8/10.7/10.6
+安装目录取决于你安装的macOS系统决定.
+这个驱动将通过Clover加载而不需要安装到`/System/Library/Extensions/`,同时它也不会删除系统自带的`AppleHDA.kext`,您甚至无需备份`/Others/AppleALC.kext`
 
-This installer will instal the VoodooHDA kernel extension on ESP / EFI/CLOVER/kexts/
-10.12/10.11/10.10/10.9/10.8/10.7/10.6
-The kext will be inject by Clover
+## 方法二:Clover传统模式
 
-## Method-2 for Clover Legacy
+你也可以安装VoodooHDA.kext内核扩展程序到/EFI/Clover/kexts/10.12/10.11/10.10/10.9/10.8/10.7/10.6 
+这个驱动将通过Clover加载.
 
-You can also install VoodooHDA kernel extension on 10.12/10.11/10.10/10.9/10.8/10.7/10.6 
-The kext will be inject by Clover.
+## 方法三: 经典方法
 
-## Method-3 Clasic Method
+您也可以选择10.6到10.12的Clasic方法，这将在系统库扩展上安装VoodooHDA.kext + AppleHDADisabler.kext
 
-You can also select Clasic method for 10.6 to 10.12
-and this will install the VoodooHDA.kext + AppleHDADisabler.kext on System Library Extensions
+这将在应用程序上安装VoodooHdaSettingsLoader.app，在Library / PreferencePanes上安装VoodooHDA.prefPane 
+在这两种方法中，在usr / local / bin / getdump上安装getdump。
 
-This will install also VoodooHdaSettingsLoader.app
-on Applications and VoodooHDA.prefPane on Library / PreferencePanes  
-Install getdump on usr/local/bin/getdump
-in both methods.
-
-Note:
-For all OS X System VoodooHDA.prefPane is installed on Library/PreferancesPanes
+注意：对于所有OS X系统，VoodooHDA.prefPane安装在Library / PreferancesPanes中
 
 
 [![Modular Image Creation](https://i37.servimg.com/u/f37/18/50/18/69/voodoo11.png)]()
+
+
