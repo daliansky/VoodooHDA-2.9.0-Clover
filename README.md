@@ -21,7 +21,7 @@ VoodooHDA是符合英特尔高保真音频（HDA）规范的设备的开源音�
 你需要有现成的Clover，它只会安装VoodooHDA和其他必需的组件来正常运行。
 
 ## 方法一:通过Clover UEFI/ESP驱动
-请点击下载:[VoodooHDA 2.9.0 Clover-V11.dmg](https://raw.githubusercontent.com/daliansky/VoodooHDA-2.9.0-Clover-V10/master/VoodooHDA_2.9.0_Clover-V11.dmg)
+请点击下载:[VoodooHDA 2.9.0 Clover-V12.dmg](https://raw.githubusercontent.com/daliansky/VoodooHDA-2.9.0-Clover/master/VoodooHDA_2.9.0_Clover-V12.dmg)
 这个安装程序会自动安装到`/ESP/EFI/CLOVER/kexts/`以及下面的目录里10.14/10.13/10.12/10.11/10.10/10.9/10.8/10.7/10.6
 安装目录取决于你安装的macOS系统决定.
 **这个驱动将通过Clover加载而不需要安装到`/System/Library/Extensions/`,同时它也不会删除系统自带的`AppleHDA.kext`,您甚至无需备份`/Others/AppleALC.kext**`
